@@ -17,8 +17,6 @@ my ($opt, $usage) = describe_options(
     [ 'username|u=s', "username for account on wikipedia", {default => $c->{username} // ""} ],
     [ 'password|p=s', "password for account on wikipedia (do not use)", {default => $c->{password} // ""} ],
     [ 'base|b=s', "base location on wikipedia where files exist (default User:AzaToth or entry in .mwbotrc)", {default => $c->{base} // "User:AzaToth"} ],
-    [ 'lang=s', 'Target language', {default => 'en'} ],
-    [ 'family=s', 'Target family', {default => 'wikipedia'} ],
     [ 'mode' => hidden =>
         {
             required => 1,
@@ -73,7 +71,7 @@ my $repo = Git::Repository->new();
 my $bot = MediaWiki::Bot->new({
         assert      => 'user',
         protocol    => 'https',
-        host        => "$opt->{lang}.$opt->{family}.org",
+        host        => "wiki.pengsheep.org",
         login_data  => { username => $opt->username, password => $opt->password},
         debug => $opt->{verbose} ? 2 : 0,
 		maxlag => 1000000 # not a botty script, thus smash it!
@@ -118,7 +116,7 @@ if( $opt->mode eq "pull" ) {
 			die "file not deployable";
 		}
 		$page = $deploys{$file};
-		say "$file -> $opt->{lang}.$opt->{family}.org/wiki/$page";
+		say "$file -> wiki.pengsheep.org/wiki/$page";
         my $tag = $repo->run(describe => '--always', '--dirty');
         my $log = $repo->run(log => '-1', '--pretty=format:%s', '--no-color');
         my $text = read_file($file,  {binmode => ':raw' });
