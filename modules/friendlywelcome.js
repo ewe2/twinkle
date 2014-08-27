@@ -587,7 +587,7 @@ Twinkle.welcome.templates = {
 		syntax: "{{subst:welcome-videogames}}"
 	},
 	"TWA invite": {
-		description: "invite the user to The Wikipedia Adventure (not a welcome template)",
+		description: "invite the user to The Ewik Adventure (not a welcome template)",
 		linkedArticle: false,
 		syntax: "{{WP:TWA/Invite|signature=~~~~}}"
 	},
@@ -745,7 +745,7 @@ Twinkle.welcome.callbacks = {
 			text += "\n" + welcomeText;
 		}
 
-		var summaryText = "Welcome to Wikipedia!";
+		var summaryText = "Welcome to Ewik!";
 		pageobj.setPageText(text);
 		pageobj.setEditSummary(summaryText + Twinkle.getPref('summaryAd'));
 		pageobj.setWatchlist(Twinkle.getFriendlyPref('watchWelcomes'));

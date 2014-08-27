@@ -9,6 +9,8 @@ See [Wikipedia:Twinkle][] on the English Wikipedia for more information.
 
 [AzaToth][] is the original author and maintainer of the tool, as well as the `morebits.js` library.
 
+This version is designed to support Ewik, a personal wiki and sandbox.
+
 Layout of this repository
 -------------------------
 

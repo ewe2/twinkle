@@ -8,7 +8,7 @@
  ****************************************
  *** twinkleconfig.js: Preferences module
  ****************************************
- * Mode of invocation:     Adds configuration form to Wikipedia:Twinkle/Preferences and user 
+ * Mode of invocation:     Adds configuration form to Ewik:Twinkle/Preferences and user 
                            subpages named "/Twinkle preferences", and adds ad box to the top of user 
                            subpages belonging to the currently logged-in user which end in '.js'
  * Active on:              What I just said.  Yeah.
@@ -100,8 +100,8 @@ Twinkle.config.commonSets = {
 		"1": "Talk (article)",
 		"2": "User",
 		"3": "User talk",
-		"4": "Wikipedia",
-		"5": "Wikipedia talk",
+		"4": "Ewik",
+		"5": "Ewik talk",
 		"6": "File",
 		"7": "File talk",
 		"8": "MediaWiki",
@@ -850,7 +850,7 @@ Twinkle.config.init = function twinkleconfigInit() {
 	if ((mw.config.get("wgNamespaceNumber") === mw.config.get("wgNamespaceIds").project && mw.config.get("wgTitle") === "Twinkle/Preferences" ||
 			(mw.config.get("wgNamespaceNumber") === mw.config.get("wgNamespaceIds").user && mw.config.get("wgTitle").lastIndexOf("/Twinkle preferences") === (mw.config.get("wgTitle").length - 20))) &&
 			mw.config.get("wgAction") === "view") {
-		// create the config page at Wikipedia:Twinkle/Preferences, and at user subpages (for testing purposes)
+		// create the config page at Ewik:Twinkle/Preferences, and at user subpages (for testing purposes)
 
 		if (!document.getElementById("twinkle-config")) {
 			return;  // maybe the page is misconfigured, or something - but any attempt to modify it will be pointless

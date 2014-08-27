@@ -189,7 +189,7 @@ Twinkle.arv.callback.changeCategory = function (e) {
 		work_area.append ( {
 				type: 'header',
 				label: 'Type(s) of inappropriate username',
-				tooltip: 'Wikipedia does not allow usernames that are misleading, promotional, offensive or disruptive. Domain names and email addresses are likewise prohibited. These criteria apply to both usernames and signatures. Usernames that are inappropriate in another language, or that represent an inappropriate name with misspellings and substitutions, or do so indirectly or by implication, are still considered inappropriate.'
+				tooltip: 'Ewik does not allow usernames that are misleading, promotional, offensive or disruptive. Domain names and email addresses are likewise prohibited. These criteria apply to both usernames and signatures. Usernames that are inappropriate in another language, or that represent an inappropriate name with misspellings and substitutions, or do so indirectly or by implication, are still considered inappropriate.'
 			} );
 		work_area.append( {
 				type: 'checkbox',
@@ -213,7 +213,7 @@ Twinkle.arv.callback.changeCategory = function (e) {
 					{
 						label: 'Disruptive username',
 						value: 'disruptive',
-						tooltip: 'Disruptive usernames include outright trolling or personal attacks, or otherwise show a clear intent to disrupt Wikipedia.'
+						tooltip: 'Disruptive usernames include outright trolling or personal attacks, or otherwise show a clear intent to disrupt Ewik.'
 					}
 				]
 			} );
@@ -557,10 +557,10 @@ Twinkle.arv.callback.evaluate = function(e) {
 			Morebits.simpleWindow.setButtonsEnabled( false );
 			Morebits.status.init( form );
 
-			Morebits.wiki.actionCompleted.redirect = "Wikipedia:Administrator intervention against vandalism";
+			Morebits.wiki.actionCompleted.redirect = "Ewik:Administrator intervention against vandalism";
 			Morebits.wiki.actionCompleted.notice = "Reporting complete";
 
-			var aivPage = new Morebits.wiki.page( 'Wikipedia:Administrator intervention against vandalism', 'Processing AIV request' );
+			var aivPage = new Morebits.wiki.page( 'Ewik:Administrator intervention against vandalism', 'Processing AIV request' );
 			aivPage.setPageSection( 1 );
 			aivPage.setFollowRedirect( true );
 			
@@ -608,10 +608,10 @@ Twinkle.arv.callback.evaluate = function(e) {
 			Morebits.simpleWindow.setButtonsEnabled( false );
 			Morebits.status.init( form );
 
-			Morebits.wiki.actionCompleted.redirect = "Wikipedia:Usernames for administrator attention";
+			Morebits.wiki.actionCompleted.redirect = "Ewik:Usernames for administrator attention";
 			Morebits.wiki.actionCompleted.notice = "Reporting complete";
 
-			var uaaPage = new Morebits.wiki.page( 'Wikipedia:Usernames for administrator attention', 'Processing UAA request' );
+			var uaaPage = new Morebits.wiki.page( 'Ewik:Usernames for administrator attention', 'Processing UAA request' );
 			uaaPage.setFollowRedirect( true );
 
 			uaaPage.load( function() {
@@ -769,7 +769,7 @@ Twinkle.arv.processSock = function( params ) {
 	}
 	text += "}}";
 
-	var reportpage = 'Wikipedia:Sockpuppet investigations/' + params.uid;
+	var reportpage = 'Ewik:Sockpuppet investigations/' + params.uid;
 
 	Morebits.wiki.actionCompleted.redirect = reportpage;
 	Morebits.wiki.actionCompleted.notice = "Reporting complete";
@@ -884,7 +884,7 @@ Twinkle.arv.processAN3 = function( params ) {
 
 		var text = "\n\n"+'{{subst:AN3 report|diffs='+difftext+'|warnings='+warningtext+'|resolves='+resolvetext+'|pagename='+params.page+'|orig='+origtext+'|comment='+comment+'|uid='+params.uid+'}}';
 
-		var reportpage = 'Wikipedia:Administrators\' noticeboard/Edit warring';
+		var reportpage = 'Ewik:Administrators\' noticeboard/Edit warring';
 
 		Morebits.wiki.actionCompleted.redirect = reportpage;
 		Morebits.wiki.actionCompleted.notice = "Reporting complete";

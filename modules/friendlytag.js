@@ -11,7 +11,7 @@
  * Mode of invocation:     Tab ("Tag")
  * Active on:              Existing articles; file pages with a corresponding file
  *                         which is local (not on Commons); existing subpages of
- *                         {Wikipedia|Wikipedia talk}:Articles for creation;
+ *                         {Ewik|Ewik talk}:Articles for creation;
  *                         all redirects
  * Config directives in:   FriendlyConfig
  */
@@ -28,7 +28,7 @@ Twinkle.tag = function friendlytag() {
 		Twinkle.addPortletLink( Twinkle.tag.callback, "Tag", "friendly-tag", "Add maintenance tags to file" );
 	}
 	// article/draft article tagging
-	else if( ( mw.config.get('wgNamespaceNumber') === 0 || mw.config.get('wgNamespaceNumber') === 118 || /^Wikipedia( talk)?\:Articles for creation\//.exec(Morebits.pageNameNorm) ) && mw.config.get('wgCurRevisionId') ) {
+	else if( ( mw.config.get('wgNamespaceNumber') === 0 || mw.config.get('wgNamespaceNumber') === 118 || /^Ewik( talk)?\:Articles for creation\//.exec(Morebits.pageNameNorm) ) && mw.config.get('wgCurRevisionId') ) {
 		Twinkle.tag.mode = 'article';
 		Twinkle.addPortletLink( Twinkle.tag.callback, "Tag", "friendly-tag", "Add maintenance tags to article" );
 	}
@@ -304,7 +304,7 @@ Twinkle.tag.updateSortOrder = function(e) {
 					type: 'checkbox',
 					list: [
 						{
-							label: 'List this article at Wikipedia:Pages needing translation into English (PNT)',
+							label: 'List this article at Ewik:Pages needing translation into English (PNT)',
 							checked: true
 						}
 					]
@@ -431,7 +431,7 @@ Twinkle.tag.article.tags = {
 	"BLP unsourced": "BLP article has no sources at all (use BLP PROD instead for new articles)",
 	"citation style": "article has unclear or inconsistent inline citations",
 	"cleanup": "article may require cleanup",
-	"cleanup-reorganize": "article may be in need of reorganization to comply with Wikipedia's layout guidelines",
+	"cleanup-reorganize": "article may be in need of reorganization to comply with Ewik's layout guidelines",
 	"close paraphrasing": "article contains close paraphrasing of a non-free copyrighted source",
 	"COI": "article creator or major contributor may have a conflict of interest",
 	"condense": "article may have too many section headers dividing up its content",
@@ -442,7 +442,7 @@ Twinkle.tag.article.tags = {
 	"dead end": "article has no links to other articles",
 	"disputed": "article has questionable factual accuracy",
 	"essay-like": "article is written like a personal reflection or opinion essay",
-	"expand language": "article can be expanded with material from a foreign-language Wikipedia",
+	"expand language": "article can be expanded with material from a foreign-language Ewik",
 	"expert-subject": "article needs attention from an expert on the subject",
 	"external links": "article's external links may not follow content policies or guidelines",
 	"fansite": "article resembles a fansite",
@@ -735,7 +735,7 @@ Twinkle.tag.administrativeList = [
 		value: 'R to decade'
 	},
 	{
-		label: '{{R from shortcut}}: redirect from a Wikipedia shortcut',
+		label: '{{R from shortcut}}: redirect from a Ewik shortcut',
 		value: 'R from shortcut'
 	},
 	{
@@ -1119,8 +1119,8 @@ Twinkle.tag.callbacks = {
 
 			// post at WP:PNT for {{not English}} and {{rough translation}} tag
 			if (params.translationPostAtPNT) {
-				var pntPage = new Morebits.wiki.page('Wikipedia:Pages needing translation into English',
-					"Listing article at Wikipedia:Pages needing translation into English");
+				var pntPage = new Morebits.wiki.page('Ewik:Pages needing translation into English',
+					"Listing article at Ewik:Pages needing translation into English");
 				pntPage.setFollowRedirect(true);
 				pntPage.setCallbackParameters({
 					template: params.tags.indexOf("rough translation") !== -1 ? "duflu" : "needtrans",
@@ -1145,7 +1145,7 @@ Twinkle.tag.callbacks = {
 						"{{subst:uw-notenglish|1=" + Morebits.pageNameNorm +
 						(params.translationPostAtPNT ? "" : "|nopnt=yes") + "}} ~~~~";
 					userTalkPage.setAppendText(notifytext);
-					userTalkPage.setEditSummary("Notice: Please use English when contributing to the English Wikipedia." +
+					userTalkPage.setEditSummary("Notice: Please use English when contributing to the English Ewik." +
 						Twinkle.getPref('summaryAd'));
 					userTalkPage.setCreateOption('recreate');
 					userTalkPage.setFollowRedirect(true);

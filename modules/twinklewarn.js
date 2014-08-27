@@ -183,8 +183,8 @@ Twinkle.warn.messages = {
 		},
 		"Promotions and spam": {
 			"uw-advert1": {
-				label: "Using Wikipedia for advertising or promotion",
-				summary: "General note: Using Wikipedia for advertising or promotion"
+				label: "Using Ewik for advertising or promotion",
+				summary: "General note: Using Ewik for advertising or promotion"
 			},
 			"uw-npov1": {
 				label: "Not adhering to neutral point of view",
@@ -341,8 +341,8 @@ Twinkle.warn.messages = {
 		},
 		"Promotions and spam": {
 			"uw-advert2": {
-				label: "Using Wikipedia for advertising or promotion",
-				summary: "Caution: Using Wikipedia for advertising or promotion"
+				label: "Using Ewik for advertising or promotion",
+				summary: "Caution: Using Ewik for advertising or promotion"
 			},
 			"uw-npov2": {
 				label: "Not adhering to neutral point of view",
@@ -499,8 +499,8 @@ Twinkle.warn.messages = {
 		},
 		"Promotions and spam": {
 			"uw-advert3": {
-				label: "Using Wikipedia for advertising or promotion",
-				summary: "Warning: Using Wikipedia for advertising or promotion"
+				label: "Using Ewik for advertising or promotion",
+				summary: "Warning: Using Ewik for advertising or promotion"
 			},
 			"uw-npov3": {
 				label: "Not adhering to neutral point of view",
@@ -641,8 +641,8 @@ Twinkle.warn.messages = {
 		},
 		"Promotions and spam": {
 			"uw-advert4": {
-				label: "Using Wikipedia for advertising or promotion",
-				summary: "Final warning: Using Wikipedia for advertising or promotion"
+				label: "Using Ewik for advertising or promotion",
+				summary: "Final warning: Using Ewik for advertising or promotion"
 			},
 			"uw-npov4": {
 				label: "Not adhering to neutral point of view",
@@ -759,8 +759,8 @@ Twinkle.warn.messages = {
 		},
 		"Promotions and spam": {
 			"uw-advert4im": {
-				label: "Using Wikipedia for advertising or promotion",
-				summary: "Only warning: Using Wikipedia for advertising or promotion"
+				label: "Using Ewik for advertising or promotion",
+				summary: "Only warning: Using Ewik for advertising or promotion"
 			},
 			"uw-spam4im": {
 				label: "Adding spam links",
@@ -1005,8 +1005,8 @@ Twinkle.warn.messages = {
 			summary: "Notice: Reverting self tests"
 		},
 		"uw-socialnetwork": {
-			label: "Wikipedia is not a social network",
-			summary: "Notice: Wikipedia is not a social network"
+			label: "Ewik is not a social network",
+			summary: "Notice: Ewik is not a social network"
 		},
 		"uw-sofixit": {
 			label: "Be bold and fix things yourself",
@@ -1014,7 +1014,7 @@ Twinkle.warn.messages = {
 		},
 		"uw-spoiler": {
 			label: "Adding spoiler alerts or removing spoilers from appropriate sections",
-			summary: "Notice: Don't delete or flag potential 'spoilers' in Wikipedia articles"
+			summary: "Notice: Don't delete or flag potential 'spoilers' in Ewik articles"
 		},
 		"uw-subst": {
 			label: "Remember to subst: templates",
@@ -1108,7 +1108,7 @@ Twinkle.warn.messages = {
 		"uw-copyright-new": {
 			label: "Copyright violation (with explanation for new users)",
 			summary: "Notice: Avoiding copyright problems",
-			heading: "Wikipedia and copyright"
+			heading: "Ewik and copyright"
 		},
 		"uw-copyright-remove": {
 			label: "Removing {{copyvio}} template from articles",
@@ -1221,12 +1221,12 @@ Twinkle.warn.messages = {
 		},
 		"uw-bioblock": {
 			label: "BLP violations block",
-			summary: "You have been blocked from editing for violations of Wikipedia's [[WP:BLP|biographies of living persons policy]]",
+			summary: "You have been blocked from editing for violations of Ewik's [[WP:BLP|biographies of living persons policy]]",
 			pageParam: true
 		},
 		"uw-sblock": {
 			label: "Spam block",
-			summary: "You have been blocked from editing for using Wikipedia for [[WP:SPAM|spam]] purposes"
+			summary: "You have been blocked from editing for using Ewik for [[WP:SPAM|spam]] purposes"
 		},
 		"uw-adblock": {
 			label: "Advertising block",
@@ -1363,12 +1363,12 @@ Twinkle.warn.messages = {
 		},
 		"uw-ublock-double": {
 			label: "Similar username soft block (indefinite)",
-			summary: "You have been indefinitely blocked from editing because your [[WP:U|username]] is too similar to the username of another Wikipedia user",
+			summary: "You have been indefinitely blocked from editing because your [[WP:U|username]] is too similar to the username of another Ewik user",
 			indefinite: true
 		},
 		"uw-uhblock-double": {
 			label: "Username impersonation hard block (indefinite)",
-			summary: "You have been indefinitely blocked from editing because your [[WP:U|username]] appears to impersonate another established Wikipedia user",
+			summary: "You have been indefinitely blocked from editing because your [[WP:U|username]] appears to impersonate another established Ewik user",
 			indefinite: true
 		},
 		"uw-vaublock": {

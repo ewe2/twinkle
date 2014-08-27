@@ -1173,7 +1173,7 @@ Twinkle.protect.callback.evaluate = function twinkleprotectCallbackEvaluate(e) {
 			Morebits.simpleWindow.setButtonsEnabled( false );
 			Morebits.status.init( form );
 
-			var rppName = 'Wikipedia:Requests for page protection';
+			var rppName = 'Ewik:Requests for page protection';
 
 			// Updating data for the action completed event
 			Morebits.wiki.actionCompleted.redirect = rppName;
@@ -1371,7 +1371,7 @@ Twinkle.protect.callbacks = {
 		if (text.length === originalTextLength)
 		{
 			var linknode = document.createElement('a');
-			linknode.setAttribute("href", mw.util.getUrl("Wikipedia:Twinkle/Fixing RPP") );
+			linknode.setAttribute("href", mw.util.getUrl("Ewik:Twinkle/Fixing RPP") );
 			linknode.appendChild(document.createTextNode('How to fix RPP'));
 			statusElement.error( [ 'Could not find relevant heading on WP:RPP. To fix this problem, please see ', linknode, '.' ] );
 			return;

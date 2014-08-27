@@ -467,13 +467,13 @@ Twinkle.xfd.callbacks = {
 					var title = titles[i].getAttribute('title');
 
 					// First, simple test, is there an instance with this exact name?
-					if( title === 'Wikipedia:Articles for deletion/' + Morebits.pageNameNorm ) {
+					if( title === 'Ewik:Articles for deletion/' + Morebits.pageNameNorm ) {
 						number = Math.max( number, 1 );
 						continue;
 					}
 
 					var order_re = new RegExp( '^' +
-						RegExp.escape( 'Wikipedia:Articles for deletion/' + Morebits.pageNameNorm, true ) +
+						RegExp.escape( 'Ewik:Articles for deletion/' + Morebits.pageNameNorm, true ) +
 						'\\s*\\(\\s*(\\d+)(?:(?:th|nd|rd|st) nom(?:ination)?)?\\s*\\)\\s*$');
 					var match = order_re.exec( title );
 
@@ -488,7 +488,7 @@ Twinkle.xfd.callbacks = {
 				apiobj.params.number = Twinkle.xfd.num2order( parseInt( number, 10 ) + 1);
 				apiobj.params.numbering = number > 0 ? ' (' + apiobj.params.number + ' nomination)' : '';
 			}
-			apiobj.params.discussionpage = 'Wikipedia:Articles for deletion/' + Morebits.pageNameNorm + apiobj.params.numbering;
+			apiobj.params.discussionpage = 'Ewik:Articles for deletion/' + Morebits.pageNameNorm + apiobj.params.numbering;
 
 			Morebits.status.info( "Next discussion page", "[[" + apiobj.params.discussionpage + "]]" );
 
@@ -534,7 +534,7 @@ Twinkle.xfd.callbacks = {
 
 			// Today's list
 			var date = new Date();
-			wikipedia_page = new Morebits.wiki.page('Wikipedia:Articles for deletion/Log/' + date.getUTCFullYear() + ' ' +
+			wikipedia_page = new Morebits.wiki.page('Ewik:Articles for deletion/Log/' + date.getUTCFullYear() + ' ' +
 				date.getUTCMonthName() + ' ' + date.getUTCDate(), "Adding discussion to today's list");
 			wikipedia_page.setFollowRedirect(true);
 			wikipedia_page.setCallbackParameters(params);
@@ -602,7 +602,7 @@ Twinkle.xfd.callbacks = {
 			var text = old_text.replace( /(<\!-- Add new entries to the TOP of the following list -->\n+)/, "$1{{subst:afd3|pg=" + Morebits.pageNameNorm + params.numbering + "}}\n");
 			if( text === old_text ) {
 				var linknode = document.createElement('a');
-				linknode.setAttribute("href", mw.util.getUrl("Wikipedia:Twinkle/Fixing AFD") + "?action=purge" );
+				linknode.setAttribute("href", mw.util.getUrl("Ewik:Twinkle/Fixing AFD") + "?action=purge" );
 				linknode.appendChild(document.createTextNode('How to fix AFD'));
 				statelem.error( [ 'Could not find the target spot for the discussion. To fix this problem, please see ', linknode, '.' ] );
 				return;
@@ -801,13 +801,13 @@ Twinkle.xfd.callbacks = {
 					var title = titles[i].getAttribute('title');
 
 					// First, simple test, is there an instance with this exact name?
-					if( title === 'Wikipedia:Miscellany for deletion/' + Morebits.pageNameNorm ) {
+					if( title === 'Ewik:Miscellany for deletion/' + Morebits.pageNameNorm ) {
 						number = Math.max( number, 1 );
 						continue;
 					}
 
 					var order_re = new RegExp( '^' +
-							RegExp.escape( 'Wikipedia:Miscellany for deletion/' + Morebits.pageNameNorm, true ) +
+							RegExp.escape( 'Ewik:Miscellany for deletion/' + Morebits.pageNameNorm, true ) +
 							'\\s*\\(\\s*(\\d+)(?:(?:th|nd|rd|st) nom(?:ination)?)?\\s*\\)\\s*$' );
 					var match = order_re.exec( title );
 
@@ -822,7 +822,7 @@ Twinkle.xfd.callbacks = {
 				apiobj.params.number = Twinkle.xfd.num2order( parseInt( number, 10 ) + 1);
 				apiobj.params.numbering = number > 0 ? ' (' + apiobj.params.number + ' nomination)' : '';
 			}
-			apiobj.params.discussionpage = "Wikipedia:Miscellany for deletion/" + Morebits.pageNameNorm + apiobj.params.numbering;
+			apiobj.params.discussionpage = "Ewik:Miscellany for deletion/" + Morebits.pageNameNorm + apiobj.params.numbering;
 
 			apiobj.statelem.info( "next in order is [[" + apiobj.params.discussionpage + ']]');
 
@@ -842,7 +842,7 @@ Twinkle.xfd.callbacks = {
 			wikipedia_page.load(Twinkle.xfd.callbacks.mfd.discussionPage);
 
 			// Today's list
-			wikipedia_page = new Morebits.wiki.page("Wikipedia:Miscellany for deletion", "Adding discussion to today's list");
+			wikipedia_page = new Morebits.wiki.page("Ewik:Miscellany for deletion", "Adding discussion to today's list");
 			//wikipedia_page.setPageSection(2);
 				// pageSection has been disabled - the API seems to throw up with nonexistent edit conflicts
 				// it can be turned on again once the problem is fixed, to save bandwidth
@@ -1364,7 +1364,7 @@ Twinkle.xfd.callbacks = {
 		},
 		main: function(params) {
 			var date = new Date();
-			params.logpage = 'Wikipedia:Redirects for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
+			params.logpage = 'Ewik:Redirects for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
 
 			// Tagging redirect
 			var wikipedia_page = new Morebits.wiki.page(mw.config.get('wgPageName'), "Adding deletion tag to redirect");
@@ -1549,7 +1549,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 			xfdtarget = '';
 		}
 
-		logpage = 'Wikipedia:Templates for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
+		logpage = 'Ewik:Templates for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
 		params = { tfdinline: tfdinline, logpage: logpage, noinclude: noinclude, xfdcat: xfdcat, target: xfdtarget, reason: reason };
 
 		// Tagging template(s)
@@ -1619,13 +1619,13 @@ Twinkle.xfd.callback.evaluate = function(e) {
 
 	case 'ffd': // FFD/PUF/NFCR
 		var dateString = date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
-		logpage = 'Wikipedia:Files for deletion/' + dateString;
+		logpage = 'Ewik:Files for deletion/' + dateString;
 		params = { usertalk: usertalk, reason: reason, date: dateString, logpage: logpage };
 
 		Morebits.wiki.addCheckpoint();
 		switch( ffdvenue ) {
 			case 'puf':
-				params.logpage = logpage = 'Wikipedia:Possibly unfree files/' + dateString;
+				params.logpage = logpage = 'Ewik:Possibly unfree files/' + dateString;
 
 				// Updating data for the action completed event
 				Morebits.wiki.actionCompleted.redirect = logpage;
@@ -1655,7 +1655,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 
 			case 'nfcr':
 				// Updating data for the action completed event
-				Morebits.wiki.actionCompleted.redirect = "Wikipedia:Non-free content review";
+				Morebits.wiki.actionCompleted.redirect = "Ewik:Non-free content review";
 				Morebits.wiki.actionCompleted.notice = "Nomination completed, now redirecting to the discussion page";
 
 				// Tagging file
@@ -1664,7 +1664,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 					wikipedia_page.setFollowRedirect(true);
 					wikipedia_page.setPrependText("{{non-free review}}\n");
 					wikipedia_page.setEditSummary("This file" +
-						" has been listed for review at [[Wikipedia:Non-free content review#" + Morebits.pageNameNorm + "]]." + Twinkle.getPref('summaryAd'));
+						" has been listed for review at [[Ewik:Non-free content review#" + Morebits.pageNameNorm + "]]." + Twinkle.getPref('summaryAd'));
 					switch (Twinkle.getPref('xfdWatchPage')) {
 						case 'yes':
 							wikipedia_page.setWatchlist(true);
@@ -1681,7 +1681,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 				}
 
 				// Adding discussion
-				wikipedia_page = new Morebits.wiki.page("Wikipedia:Non-free content review", "Adding discussion to the NFCR page");
+				wikipedia_page = new Morebits.wiki.page("Ewik:Non-free content review", "Adding discussion to the NFCR page");
 				wikipedia_page.setFollowRedirect(true);
 				wikipedia_page.setAppendText("\n\n== [[:" + Morebits.pageNameNorm + "]] ==\n\n" +
 					Morebits.string.formatReasonText(params.reason) + " ~~~~");
@@ -1740,7 +1740,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 			xfdtarget2 = xfdtarget2.replace( /^\:?Category\:/i, '' );
 		}
 
-		logpage = 'Wikipedia:Categories for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
+		logpage = 'Ewik:Categories for discussion/Log/' + date.getUTCFullYear() + ' ' + date.getUTCMonthName() + ' ' + date.getUTCDate();
 
 		params = { reason: reason, xfdcat: xfdcat, target: xfdtarget, target2: xfdtarget2, logpage: logpage };
 
@@ -1775,7 +1775,7 @@ Twinkle.xfd.callback.evaluate = function(e) {
 	case 'cfds':
 		xfdtarget = xfdtarget.replace( /^\:?Category\:/, '' );
 
-		logpage = "Wikipedia:Categories for discussion/Speedy";
+		logpage = "Ewik:Categories for discussion/Speedy";
 		params = { reason: reason, xfdcat: xfdcat, target: xfdtarget };
 
 		// Updating data for the action completed event

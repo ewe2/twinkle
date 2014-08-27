@@ -404,7 +404,7 @@ Twinkle.speedy.fileList = [
 	{
 		label: 'F1: Redundant file',
 		value: 'redundantimage',
-		tooltip: 'Any file that is a redundant copy, in the same file format and same or lower resolution, of something else on Wikipedia. Likewise, other media that is a redundant copy, in the same format and of the same or lower quality. This does not apply to files duplicated on Wikimedia Commons, because of licence issues; these should be tagged with {{subst:ncd|Image:newname.ext}} or {{subst:ncd}} instead',
+		tooltip: 'Any file that is a redundant copy, in the same file format and same or lower resolution, of something else on Ewik. Likewise, other media that is a redundant copy, in the same format and of the same or lower quality. This does not apply to files duplicated on Wikimedia Commons, because of licence issues; these should be tagged with {{subst:ncd|Image:newname.ext}} or {{subst:ncd}} instead',
 		subgroup: {
 			name: 'redundantimage_filename',
 			type: 'input',
@@ -420,7 +420,7 @@ Twinkle.speedy.fileList = [
 	{
 		label: 'F2: Unneeded file description page for a file on Commons',
 		value: 'fpcfail',
-		tooltip: 'An image, hosted on Commons, but with tags or information on its English Wikipedia description page that are no longer needed. (For example, a failed featured picture candidate.)',
+		tooltip: 'An image, hosted on Commons, but with tags or information on its English Ewik description page that are no longer needed. (For example, a failed featured picture candidate.)',
 		hideWhenMultiple: true
 	},
 	{
@@ -485,7 +485,7 @@ Twinkle.speedy.fileList = [
 	{
 		label: 'F9: Unambiguous copyright infringement',
 		value: 'imgcopyvio',
-		tooltip: 'The file was copied from a website or other source that does not have a license compatible with Wikipedia, and the uploader neither claims fair use nor makes a credible assertion of permission of free use. Sources that do not have a license compatible with Wikipedia include stock photo libraries such as Getty Images or Corbis. Non-blatant copyright infringements should be discussed at Wikipedia:Files for deletion',
+		tooltip: 'The file was copied from a website or other source that does not have a license compatible with Ewik, and the uploader neither claims fair use nor makes a credible assertion of permission of free use. Sources that do not have a license compatible with Ewik include stock photo libraries such as Getty Images or Corbis. Non-blatant copyright infringements should be discussed at Ewik:Files for deletion',
 		subgroup: {
 			name: 'imgcopyvio_url',
 			type: 'input',
@@ -625,7 +625,7 @@ Twinkle.speedy.userList = [
 	{
 		label: 'U1: User request',
 		value: 'userreq',
-		tooltip: 'Personal subpages, upon request by their user. In some rare cases there may be administrative need to retain the page. Also, sometimes, main user pages may be deleted as well. See Wikipedia:User page for full instructions and guidelines',
+		tooltip: 'Personal subpages, upon request by their user. In some rare cases there may be administrative need to retain the page. Also, sometimes, main user pages may be deleted as well. See Ewik:User page for full instructions and guidelines',
 		subgroup: ((mw.config.get('wgNamespaceNumber') === 3 && mw.config.get('wgTitle').indexOf('/') === -1) ? {
 			name: 'userreq_rationale',
 			type: 'input',
@@ -643,12 +643,12 @@ Twinkle.speedy.userList = [
 	{
 		label: 'U3: Non-free galleries',
 		value: 'gallery',
-		tooltip: 'Galleries in the userspace which consist mostly of "fair use" or non-free files. Wikipedia\'s non-free content policy forbids users from displaying non-free files, even ones they have uploaded themselves, in userspace. It is acceptable to have free files, GFDL-files, Creative Commons and similar licenses along with public domain material, but not "fair use" files'
+		tooltip: 'Galleries in the userspace which consist mostly of "fair use" or non-free files. Ewik\'s non-free content policy forbids users from displaying non-free files, even ones they have uploaded themselves, in userspace. It is acceptable to have free files, GFDL-files, Creative Commons and similar licenses along with public domain material, but not "fair use" files'
 	},
 	{
 		label: 'U5: Blatant WP:NOTWEBHOST violations',
 		value: 'notwebhost',
-		tooltip: 'Pages in userspace consisting of writings, information, discussions, and/or activities not closely related to Wikipedia\'s goals, where the owner has made few or no edits outside of userspace, with the exception of plausible drafts, pages adhering to WP:UPYES, and résumé-style pages.'
+		tooltip: 'Pages in userspace consisting of writings, information, discussions, and/or activities not closely related to Ewik\'s goals, where the owner has made few or no edits outside of userspace, with the exception of plausible drafts, pages adhering to WP:UPYES, and résumé-style pages.'
 	},
 	{
 		label: 'G11: Promotional user page under a promotional user name',
@@ -732,7 +732,7 @@ Twinkle.speedy.generalList = [
 	{
 		label: 'G2: Test page',
 		value: 'test',
-		tooltip: 'A page created to test editing or other Wikipedia functions. Pages in the User namespace are not included, nor are valid but unused or duplicate templates (although criterion T3 may apply).'
+		tooltip: 'A page created to test editing or other Ewik functions. Pages in the User namespace are not included, nor are valid but unused or duplicate templates (although criterion T3 may apply).'
 	},
 	{
 		label: 'G3: Pure vandalism',
@@ -753,7 +753,7 @@ Twinkle.speedy.generalList = [
 			name: 'repost_1',
 			type: 'input',
 			label: 'Page where the deletion discussion took place: ',
-			tooltip: 'Must start with "Wikipedia:"',
+			tooltip: 'Must start with "Ewik:"',
 			size: 60
 		}
 	},
@@ -814,7 +814,7 @@ Twinkle.speedy.generalList = [
 	{
 		label: 'G6: Unnecessary disambiguation page',
 		value: 'disambig',
-		tooltip: 'This only applies for orphaned disambiguation pages which either: (1) disambiguate two or fewer existing Wikipedia pages and whose title ends in "(disambiguation)" (i.e., there is a primary topic); or (2) disambiguates no (zero) existing Wikipedia pages, regardless of its title.',
+		tooltip: 'This only applies for orphaned disambiguation pages which either: (1) disambiguate two or fewer existing Ewik pages and whose title ends in "(disambiguation)" (i.e., there is a primary topic); or (2) disambiguates no (zero) existing Ewik pages, regardless of its title.',
 		hideWhenMultiple: true
 	},
 	{
@@ -893,7 +893,7 @@ Twinkle.speedy.generalList = [
 	{
 		label: 'G12: Unambiguous copyright infringement',
 		value: 'copyvio',
-		tooltip: 'Either: (1) Material was copied from another website that does not have a license compatible with Wikipedia, or is photography from a stock photo seller (such as Getty Images or Corbis) or other commercial content provider; (2) There is no non-infringing content in the page history worth saving; or (3) The infringement was introduced at once by a single person rather than created organically on wiki and then copied by another website such as one of the many Wikipedia mirrors',
+		tooltip: 'Either: (1) Material was copied from another website that does not have a license compatible with Ewik, or is photography from a stock photo seller (such as Getty Images or Corbis) or other commercial content provider; (2) There is no non-infringing content in the page history worth saving; or (3) The infringement was introduced at once by a single person rather than created organically on wiki and then copied by another website such as one of the many Ewik mirrors',
 		subgroup: [
 			{
 				name: 'copyvio_url',
@@ -927,9 +927,9 @@ Twinkle.speedy.generalList = [
 
 Twinkle.speedy.redirectList = [
 	{
-		label: 'R2: Redirects from mainspace to any other namespace except the Category:, Template:, Wikipedia:, Help: and Portal: namespaces',
+		label: 'R2: Redirects from mainspace to any other namespace except the Category:, Template:, Ewik:, Help: and Portal: namespaces',
 		value: 'rediruser',
-		tooltip: '(this does not include the Wikipedia shortcut pseudo-namespaces). If this was the result of a page move, consider waiting a day or two before deleting the redirect'
+		tooltip: '(this does not include the Ewik shortcut pseudo-namespaces). If this was the result of a page move, consider waiting a day or two before deleting the redirect'
 	},
 	{
 		label: 'R3: Redirects as a result of an implausible typo that were recently created',
@@ -1033,7 +1033,7 @@ Twinkle.speedy.reasonHash = {
 	'g8': 'Page dependent on a deleted or nonexistent page',
 	'talk': '[[Help:Talk page|Talk page]] of a deleted or nonexistent page',
 	'subpage': '[[WP:Subpages|Subpage]] of a deleted or nonexistent page',
-	'redirnone': '[[Wikipedia:Redirect|redirect]] to a deleted or nonexistent page',
+	'redirnone': '[[Ewik:Redirect|redirect]] to a deleted or nonexistent page',
 	'templatecat': 'Populated by deleted or retargeted templates',
 	'imagepage': 'File description page for a file that does not exist',
 	'attack': '[[WP:ATP|Attack page]] or negative unsourced [[WP:BLP|BLP]]',
@@ -1058,7 +1058,7 @@ Twinkle.speedy.reasonHash = {
 	'a10': 'Recently created article that duplicates an existing topic',
 	'madeup': 'Made up by article creator or an associate, and no indication of importance/significance',
 // Images and media
-	'redundantimage': 'File redundant to another on Wikipedia',
+	'redundantimage': 'File redundant to another on Ewik',
 	'noimage': 'Corrupt or empty file',
 	'fpcfail': 'Unneeded file description page for a file on Commons',
 	'noncom': 'File with improper license',
@@ -1076,7 +1076,7 @@ Twinkle.speedy.reasonHash = {
 	'userreq': 'User request to delete page in own userspace',
 	'nouser': 'Userpage or subpage of a nonexistent user',
 	'gallery': '[[WP:NFC|Non-free]] [[Help:Gallery|gallery]]',
-	'notwebhost': '[[WP:NOTWEBHOST|Misuse of Wikipedia as a web host]]',
+	'notwebhost': '[[WP:NOTWEBHOST|Misuse of Ewik as a web host]]',
 // Templates
 	'policy': 'Template that unambiguously misrepresents established policy',
 	'duplicatetemplate': 'Unused, redundant template',
@@ -1473,7 +1473,7 @@ Twinkle.speedy.callbacks = {
 			if (!pageobj.exists()) {
 				appendText +=
 					"This is a log of all [[WP:CSD|speedy deletion]] nominations made by this user using [[WP:TW|Twinkle]]'s CSD module.\n\n" +
-					"If you no longer wish to keep this log, you can turn it off using the [[Wikipedia:Twinkle/Preferences|preferences panel]], and " +
+					"If you no longer wish to keep this log, you can turn it off using the [[Ewik:Twinkle/Preferences|preferences panel]], and " +
 					"nominate this page for speedy deletion under [[WP:CSD#U1|CSD U1]].";
 				if (Morebits.userIsInGroup("sysop")) {
 					appendText += "\n\nThis log does not track outright speedy deletions made using Twinkle.";
@@ -1554,8 +1554,8 @@ Twinkle.speedy.getParameters = function twinklespeedyGetParameters(form, values)
 				if (form["csd.repost_1"]) {
 					var deldisc = form["csd.repost_1"].value;
 					if (deldisc) {
-						if (deldisc.substring(0, 9) !== "Wikipedia" && deldisc.substring(0, 3) !== "WP:") {
-							alert( 'CSD G4:  The deletion discussion page name, if provided, must start with "Wikipedia:".' );
+						if (deldisc.substring(0, 9) !== "Ewik" && deldisc.substring(0, 3) !== "WP:") {
+							alert( 'CSD G4:  The deletion discussion page name, if provided, must start with "Ewik:".' );
 							parameters = null;
 							return false;
 						}
@@ -1605,8 +1605,8 @@ Twinkle.speedy.getParameters = function twinklespeedyGetParameters(form, values)
 				if (form["csd.xfd_fullvotepage"]) {
 					var xfd = form["csd.xfd_fullvotepage"].value;
 					if (xfd) {
-						if (xfd.substring(0, 9) !== "Wikipedia" && xfd.substring(0, 3) !== "WP:") {
-							alert( 'CSD G6 (XFD):  The deletion discussion page name, if provided, must start with "Wikipedia:".' );
+						if (xfd.substring(0, 9) !== "Ewik" && xfd.substring(0, 3) !== "WP:") {
+							alert( 'CSD G6 (XFD):  The deletion discussion page name, if provided, must start with "Ewik:".' );
 							parameters = null;
 							return false;
 						}

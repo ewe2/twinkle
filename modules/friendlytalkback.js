@@ -272,7 +272,7 @@ var callback_change_target = function( e ) {
 					type:"input",
 					name:"page",
 					label:"Full page name",
-					tooltip:"The full page name where you left the message. For example: 'Wikipedia talk:Twinkle'.",
+					tooltip:"The full page name where you left the message. For example: 'Ewik talk:Twinkle'.",
 					value: prev_page
 				});
 			
@@ -297,7 +297,7 @@ var callback_change_target = function( e ) {
 					type:"input",
 					name:"page",
 					label:"Full page name",
-					tooltip:"The full page name of where the discussion is being held. For example: 'Wikipedia talk:Twinkle'.",
+					tooltip:"The full page name of where the discussion is being held. For example: 'Ewik talk:Twinkle'.",
 					value: prev_page
 				});
 			work_area.append({
@@ -369,42 +369,42 @@ var callback_evaluate = function( e ) {
 		switch (page) {
 			case "afchd":
 				text += "\n\n{{subst:AFCHD/u|" + section + "}} ~~~~";
-				talkpage.setEditSummary( "You have replies at the [[Wikipedia:AFCHD|Articles for Creation Help Desk]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "You have replies at the [[Ewik:AFCHD|Articles for Creation Help Desk]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "an":
 				text = "\n\n== " + Twinkle.getFriendlyPref("adminNoticeHeading") + " ==\n";
-				text += "{{subst:ANI-notice|thread=" + section + "|noticeboard=Wikipedia:Administrators' noticeboard}} ~~~~";
-				talkpage.setEditSummary( "Notice of discussion at [[Wikipedia:Administrators' noticeboard]]" + Twinkle.getPref("summaryAd") );
+				text += "{{subst:ANI-notice|thread=" + section + "|noticeboard=Ewik:Administrators' noticeboard}} ~~~~";
+				talkpage.setEditSummary( "Notice of discussion at [[Ewik:Administrators' noticeboard]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "an3":
 				text = "\n\n{{subst:An3-notice|" + section + "}} ~~~~";
-				talkpage.setEditSummary( "Notice of discussion at [[Wikipedia:Administrators' noticeboard/Edit warring]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "Notice of discussion at [[Ewik:Administrators' noticeboard/Edit warring]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "ani":
 				text = "\n\n== " + Twinkle.getFriendlyPref("adminNoticeHeading") + " ==\n";
-				text += "{{subst:ANI-notice|thread=" + section + "|noticeboard=Wikipedia:Administrators' noticeboard/Incidents}} ~~~~";
-				talkpage.setEditSummary( "Notice of discussion at [[Wikipedia:Administrators' noticeboard/Incidents]]" + Twinkle.getPref("summaryAd") );
+				text += "{{subst:ANI-notice|thread=" + section + "|noticeboard=Ewik:Administrators' noticeboard/Incidents}} ~~~~";
+				talkpage.setEditSummary( "Notice of discussion at [[Ewik:Administrators' noticeboard/Incidents]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "coin":
 				text = "\n\n{{subst:Coin-notice|thread=" + section + "}} ~~~~";
-				talkpage.setEditSummary( "Notice of discussion at [[Wikipedia:Conflict of interest noticeboard]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "Notice of discussion at [[Ewik:Conflict of interest noticeboard]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "drn":
 				text = "\n\n{{subst:DRN-notice|thread=" + section + "}} ~~~~";
-				talkpage.setEditSummary( "Notice of discussion at [[Wikipedia:Dispute resolution noticeboard]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "Notice of discussion at [[Ewik:Dispute resolution noticeboard]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "hd":
 				text = "\n\n== Your question at the Help desk ==\n";
 				text += "{{helpdeskreply|1=" + section + "|ts=~~~~~}}";
-				talkpage.setEditSummary( "You have replies at the [[Wikipedia:Help desk|Wikipedia help desk]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "You have replies at the [[Ewik:Help desk|Ewik help desk]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "otrs":
 				text = "\n\n{{OTRSreply|1=" + section + "|2=~~~~}}";
-				talkpage.setEditSummary( "You have replies at the [[Wikipedia:OTRS noticeboard|OTRS noticeboard]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "You have replies at the [[Ewik:OTRS noticeboard|OTRS noticeboard]]" + Twinkle.getPref("summaryAd") );
 				break;
 			case "th":
 				text = "\n\n== Teahouse talkback: you've got messages! ==\n{{WP:Teahouse/Teahouse talkback|WP:Teahouse/Questions|" + section + "|ts=~~~~}}";
-				talkpage.setEditSummary( "You have replies at the [[Wikipedia:Teahouse/Questions|Teahouse question board]]" + Twinkle.getPref("summaryAd") );
+				talkpage.setEditSummary( "You have replies at the [[Ewik:Teahouse/Questions|Teahouse question board]]" + Twinkle.getPref("summaryAd") );
 				break;
 			default:
 				throw "Twinkle.talkback, function callback_evaluate: default case reached";

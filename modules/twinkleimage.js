@@ -71,12 +71,12 @@ Twinkle.image.callback = function twinkleimageCallback() {
 				{
 					label: 'Orphaned fair use (CSD F5)',
 					value: 'orphaned fair use',
-					tooltip: 'Image or media is unlicensed for use on Wikipedia and allowed only under a claim of fair use per Wikipedia:Non-free content, but it is not used in any articles'
+					tooltip: 'Image or media is unlicensed for use on Ewik and allowed only under a claim of fair use per Ewik:Non-free content, but it is not used in any articles'
 				},
 				{
 					label: 'No fair use rationale (CSD F6)',
 					value: 'no fair use rationale',
-					tooltip: 'Image or media is claimed to be used under Wikipedia\'s fair use policy but has no explanation as to why it is permitted under the policy'
+					tooltip: 'Image or media is claimed to be used under Ewik\'s fair use policy but has no explanation as to why it is permitted under the policy'
 				},
 				{
 					label: 'Disputed fair use rationale (CSD F7)',
@@ -86,7 +86,7 @@ Twinkle.image.callback = function twinkleimageCallback() {
 				{
 					label: 'Replaceable fair use (CSD F7)',
 					value: 'replaceable fair use',
-					tooltip: 'Image or media may fail Wikipedia\'s first non-free content criterion ([[WP:NFCC#1]]) in that it illustrates a subject for which a free image might reasonably be found or created that adequately provides the same information'
+					tooltip: 'Image or media may fail Ewik\'s first non-free content criterion ([[WP:NFCC#1]]) in that it illustrates a subject for which a free image might reasonably be found or created that adequately provides the same information'
 				},
 				{
 					label: 'No evidence of permission (CSD F11)',
